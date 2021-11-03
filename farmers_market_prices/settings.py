@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+import django_heroku
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,9 +82,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': BASE_DIR / 'db.postgres',
-        'USER':
-        'PASSWORD':
-        'HOST'
+        'HOST': os.getenv("HOST"),
+        'DATABASE': os.getenv("DATABASE"),
+        'USER': os.getenv("USER"),
+        'PORT': os.getenv("PORT"),
+        'PASSWORD': os.getenv("PASSWORD"),
+        "URI": os.getenv("URI"),
+        "HEROKU_CLI": os.getenv("HEROKU_CLI")
     }
 }
 
