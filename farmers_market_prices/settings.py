@@ -87,7 +87,7 @@ DATABASES = {
         'USER': os.getenv("USER"),
         'PORT': os.getenv("PORT"),
         'PASSWORD': os.getenv("PASSWORD"),
-        "URI": os.getenv("URI"),
+        "DATABASE_URL": os.getenv("DATABASE_URL"),
         "HEROKU_CLI": os.getenv("HEROKU_CLI")
     }
 }
