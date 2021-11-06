@@ -1,5 +1,5 @@
 """
-WSGI config for groceries_prices project.
+WSGI config for farmers_market_prices project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'groceries_prices.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'farmers_market_prices.settings')
 
 application = get_wsgi_application()
